@@ -95,7 +95,7 @@ lazy_static::lazy_static! {
         //PIN解锁，下方有部分修复改功能代码，读取Repository secrets值
         map.insert(
             "unlock_pin".to_string(), 
-            option_env!("DEFAULT_PASSWORD").unwrap_or("").into()
+            option_env!("DEFAULT_PASSWORD_PIN").unwrap_or("").into()
         );
         //使用DirectX捕获屏幕
         map.insert("enable-directx-capture".to_string(), "Y".to_string());
